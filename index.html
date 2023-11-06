@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>App gestos com a mão</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+    <body>
+        <center>
+            <div class="container">
+        <h1 class="btn btn-warning heading">App gestos com as mãos
+            <br>
+            <span>👌</span>
+            <span>👍</span>
+            <span>🤙</span>
+            <br>
+        </h1>
+    </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Visualização da Webcam:</label>
+            <div id="camera"></div>
+            <br><br>
+            <button onclick="takeSnapshot();" class="btn btn-warning">Capturar Imagem</button>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label style="font-size:30px">Gesto 1:</label>
+            <p class="gestureName" id="resultGestureName"></p>
+            <p class="gesture" id="updateGesture"></p>
+
+            <label style="font-size:30px">Gesto 2:</label>
+            <p class="gestureName2" id="resultGestureName2"></p>
+            <p class="gesture2" id="updateGesture2"></p>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Foto: </label>
+            <div id="result"></div>
+            <br><br>
+            <button onclick="check();" class="btn btn-success">Prever gesto</button>
+        </div>
+   
+    </center>
+    <script src="main.js"></script>
+    </body>
+</html>
+
+
